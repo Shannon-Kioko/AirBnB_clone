@@ -21,7 +21,8 @@ class TestPlace_instantiation(unittest.TestCase):
         self.assertEqual(Place, type(Place()))
 
     def test_new_instance_stored_in_objects(self):
-        """Test if the new Place instance is stored in the objects dictionary."""
+        """Test if the new Place instance is stored in the
+        objects dictionary."""
         self.assertIn(Place(), models.storage.all().values())
 
     def test_id_is_public_str(self):
@@ -29,11 +30,13 @@ class TestPlace_instantiation(unittest.TestCase):
         self.assertEqual(str, type(Place().id))
 
     def test_created_at_is_public_datetime(self):
-        """Test if the created_at attribute is a public datetime in Place instances."""
+        """Test if the created_at attribute is a public datetime
+        in Place instances."""
         self.assertEqual(datetime, type(Place().created_at))
 
     def test_updated_at_is_public_datetime(self):
-        """Test if the updated_at attribute is a public datetime in Place instances."""
+        """Test if the updated_at attribute is a public
+        datetime in Place instances."""
         self.assertEqual(datetime, type(Place().updated_at))
 
     def test_city_id_is_public_class_attribute(self):
