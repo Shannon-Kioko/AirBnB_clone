@@ -174,7 +174,8 @@ class TestReview_save(unittest.TestCase):
         self.assertLess(first_updated_at, second_updated_at)
         sleep(0.05)
         rv.save()
-        self.assertLess(second_updated_at, rv.updated_at)    
+        self.assertLess(second_updated_at, rv.updated_at)
+
 
 class TestReview_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of the Review class."""
@@ -231,6 +232,7 @@ class TestReview_to_dict(unittest.TestCase):
         """Test if to_dict method differs from the dunder dict."""
         rv = Review()
         self.assertNotEqual(rv.to_dict(), rv.__dict__)
+
 
 if __name__ == "__main__":
     unittest.main()
