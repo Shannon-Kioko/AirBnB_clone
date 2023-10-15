@@ -21,7 +21,8 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertEqual(User, type(User()))
 
     def test_new_instance_stored_in_objects(self):
-        """Test if the new User instance is stored in the objects dictionary."""
+        """Test if the new User instance is stored in the
+        objects dictionary."""
         self.assertIn(User(), models.storage.all().values())
 
     def test_id_is_public_str(self):
@@ -29,11 +30,13 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertEqual(str, type(User().id))
 
     def test_created_at_is_public_datetime(self):
-        """Test if the created_at attribute is a public datetime in User instances."""
+        """Test if the created_at attribute is a public datetime
+        in User instances."""
         self.assertEqual(datetime, type(User().created_at))
 
     def test_updated_at_is_public_datetime(self):
-        """Test if the updated_at attribute is a public datetime in User instances."""
+        """Test if the updated_at attribute is a public datetime
+        in User instances."""
         self.assertEqual(datetime, type(User().updated_at))
 
     def test_email_is_public_str(self):
@@ -41,15 +44,18 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertEqual(str, type(User.email))
 
     def test_password_is_public_str(self):
-        """Test if the password attribute is a public string in User instances."""
+        """Test if the password attribute is a public string in
+        User instances."""
         self.assertEqual(str, type(User.password))
 
     def test_first_name_is_public_str(self):
-        """Test if the first_name attribute is a public string in User instances."""
+        """Test if the first_name attribute is a public
+        string in User instances."""
         self.assertEqual(str, type(User.first_name))
 
     def test_last_name_is_public_str(self):
-        """Test if the last_name attribute is a public string in User instances."""
+        """Test if the last_name attribute is a public string in
+        User instances."""
         self.assertEqual(str, type(User.last_name))
 
     def test_two_users_unique_ids(self):
@@ -59,21 +65,24 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertNotEqual(us1.id, us2.id)
 
     def test_two_users_different_created_at(self):
-        """Test if the created_at attribute is different for two User instances."""
+        """Test if the created_at attribute is different
+        for two User instances."""
         us1 = User()
         sleep(0.05)
         us2 = User()
         self.assertLess(us1.created_at, us2.created_at)
 
     def test_two_users_different_updated_at(self):
-        """Test if the updated_at attribute is different for two User instances."""
+        """Test if the updated_at attribute is different for
+        two User instances."""
         us1 = User()
         sleep(0.05)
         us2 = User()
         self.assertLess(us1.updated_at, us2.updated_at)
 
     def test_str_representation(self):
-        """Test if the __str__ method produces the correct string representation."""
+        """Test if the __str__ method produces the correct
+        string representation."""
         dt = datetime.today()
         dt_repr = repr(dt)
         us = User()
@@ -104,7 +113,8 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertEqual(us.updated_at, dt)
 
     def test_instantiation_with_None_kwargs(self):
-        """Test if User instantiation raises an error with None keyword arguments."""
+        """Test if User instantiation raises an error with
+        None keyword arguments."""
         with self.assertRaises(TypeError):
             User(id=None, created_at=None, updated_at=None)
 
