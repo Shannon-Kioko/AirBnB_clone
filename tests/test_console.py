@@ -1737,8 +1737,8 @@ class TestHBNBCommand_count(unittest.TestCase):
             Test count method with an invalid class name.
             It should return 0 and print "0" to stdout.
         test_count_object(self):
-            Test count method with valid class names after 
-            creating instances of those classes. It should 
+            Test count method with valid class names after
+            creating instances of those classes. It should
             return 1 and print "1" to stdout.
     """
 
