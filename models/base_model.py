@@ -61,4 +61,5 @@ class BaseModel:
         Returns:
             str: A string in the format "[class name] (id) {attributes}".
         """
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__,
+                                     self.id, self.__dict__)
