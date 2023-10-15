@@ -427,7 +427,8 @@ class TestHBNBCommand_show(unittest.TestCase):
 
     def test_show_objects_space_notation(self):
         """
-        Test the 'show' command using space notation (e.g., 'show BaseModel 123').
+        Test the 'show' command using space notation
+        (e.g., 'show BaseModel 123').
         """
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("create BaseModel"))
@@ -488,7 +489,8 @@ class TestHBNBCommand_show(unittest.TestCase):
 
     def test_show_objects_dot_notation(self):
         """
-        Test the 'show' command using dot notation (e.g., 'BaseModel.show(123)').
+        Test the 'show' command using dot notation
+        (e.g., 'BaseModel.show(123)').
         """
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("create BaseModel"))
@@ -554,7 +556,8 @@ class TestHBNBCommand_destroy(unittest.TestCase):
     @classmethod
     def setUp(self):
         """
-        Set up code that should run only once for all test methods in the class.
+        Set up code that should run only once for all
+        test methods in the class.
         """
         try:
             os.rename("file.json", "tmp")
@@ -565,7 +568,8 @@ class TestHBNBCommand_destroy(unittest.TestCase):
     @classmethod
     def tearDown(self):
         """
-        Teardown code that should run only once for all test methods in the class.
+        Teardown code that should run only once for all
+        test methods in the class.
         """
         try:
             os.remove("file.json")
@@ -838,7 +842,8 @@ class TestHBNBCommand_all(unittest.TestCase):
     @classmethod
     def setUp(self):
         """
-        Set up code that should run only once for all test methods in the class.
+        Set up code that should run only once for all test
+        methods in the class.
         """
         try:
             os.rename("file.json", "tmp")
@@ -849,7 +854,8 @@ class TestHBNBCommand_all(unittest.TestCase):
     @classmethod
     def tearDown(self):
         """
-        Teardown code that should run only once for all test methods in the class.
+        Teardown code that should run only once for all
+        test methods in the class.
         """
         try:
             os.remove("file.json")
@@ -1005,7 +1011,8 @@ class TestHBNBCommand_update(unittest.TestCase):
     @classmethod
     def setUp(self):
         """
-        Set up code that should run only once for all test methods in the class.
+        Set up code that should run only once for all
+        test methods in the class.
         """
         try:
             os.rename("file.json", "tmp")
@@ -1016,7 +1023,8 @@ class TestHBNBCommand_update(unittest.TestCase):
     @classmethod
     def tearDown(self):
         """
-        Teardown code that should run only once for all test methods in the class.
+        Teardown code that should run only once for all
+        test methods in the class.
         """
         try:
             os.remove("file.json")
@@ -1053,7 +1061,8 @@ class TestHBNBCommand_update(unittest.TestCase):
 
     def test_update_missing_id_space_notation(self):
         """
-        Test the 'update' command with missing instance id using space notation.
+        Test the 'update' command with missing instance
+        id using space notation.
         """
         correct = "** instance id missing **"
         with patch("sys.stdout", new=StringIO()) as output:
@@ -1107,7 +1116,8 @@ class TestHBNBCommand_update(unittest.TestCase):
 
     def test_update_invalid_id_space_notation(self):
         """
-        Test the 'update' command with invalid instance id using space notation.
+        Test the 'update' command with invalid instance
+        id using space notation.
         """
         correct = "** no instance found **"
         with patch("sys.stdout", new=StringIO()) as output:
@@ -1161,7 +1171,8 @@ class TestHBNBCommand_update(unittest.TestCase):
 
     def test_update_missing_attr_name_space_notation(self):
         """
-        Test the 'update' command with missing attribute name using space notation.
+        Test the 'update' command with missing attribute
+        name using space notation.
         """
         correct = "** attribute name missing **"
         with patch("sys.stdout", new=StringIO()) as output:
@@ -1209,7 +1220,8 @@ class TestHBNBCommand_update(unittest.TestCase):
 
     def test_update_missing_attr_name_dot_notation(self):
         """
-        Test the 'update' command with missing attribute name using dot notation.
+        Test the 'update' command with missing attribute
+        name using dot notation.
         """
         correct = "** attribute name missing **"
         with patch("sys.stdout", new=StringIO()) as output:
@@ -1257,7 +1269,8 @@ class TestHBNBCommand_update(unittest.TestCase):
 
     def test_update_missing_attr_value_space_notation(self):
         """
-        Test the 'update' command with missing attribute value using space notation.
+        Test the 'update' command with missing attribute
+        value using space notation.
         """
         correct = "** value missing **"
         with patch("sys.stdout", new=StringIO()) as output:
@@ -1312,7 +1325,8 @@ class TestHBNBCommand_update(unittest.TestCase):
 
     def test_update_missing_attr_value_dot_notation(self):
         """
-        Test the 'update' command with missing attribute value using dot notation.
+        Test the 'update' command with missing attribute
+        value using dot notation.
         """
         correct = "** value missing **"
         with patch("sys.stdout", new=StringIO()) as output:
@@ -1367,7 +1381,8 @@ class TestHBNBCommand_update(unittest.TestCase):
 
     def test_update_valid_string_attr_space_notation(self):
         """
-        Test the 'update' command with valid string attribute using space notation.
+        Test the 'update' command with valid string attribute
+        using space notation.
         """
         with patch("sys.stdout", new=StringIO()) as output:
             HBNBCommand().onecmd("create BaseModel")
@@ -1703,22 +1718,28 @@ class TestHBNBCommand_update(unittest.TestCase):
 class TestHBNBCommand_count(unittest.TestCase):
     """Unittests for testing count method of HBNB command interpreter.
 
-    This class contains unit tests for the count method in the HBNB command interpreter.
-    It tests both invalid class names and the count functionality for valid classes.
+    This class contains unit tests for the count method in the
+    HBNB command interpreter.
+    It tests both invalid class names and the count
+    functionality for valid classes.
 
     Attributes:
         N/A
 
     Methods:
-        setUp(self): Set up the test environment by renaming the file.json to tmp
-                     and resetting the __objects dictionary in FileStorage.
-        tearDown(self): Tear down the test environment by removing file.json
-                        and renaming tmp back to file.json.
-        test_count_invalid_class(self): Test count method with an invalid class name.
-                                       It should return 0 and print "0" to stdout.
-        test_count_object(self): Test count method with valid class names after creating
-                                 instances of those classes. It should return 1 and print
-                                 "1" to stdout.
+        setUp(self):
+            Set up the test environment by renaming the file.json to tmp
+            and resetting the __objects dictionary in FileStorage.
+        tearDown(self):
+            Tear down the test environment by removing file.json
+            and renaming tmp back to file.json.
+        test_count_invalid_class(self):
+            Test count method with an invalid class name.
+            It should return 0 and print "0" to stdout.
+        test_count_object(self):
+            Test count method with valid class names after 
+            creating instances of those classes. It should 
+            return 1 and print "1" to stdout.
     """
 
     @classmethod
