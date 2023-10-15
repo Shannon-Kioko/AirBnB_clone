@@ -73,18 +73,30 @@ class TestFileStorage_methods(unittest.TestCase):
     N/A
 
     Methods:
-        setUp(self): Set up the test environment.
-        tearDown(self): Tear down the test environment.
-        test_all(self): Test the all() method of FileStorage class.
-        test_all_with_arg(self): Test the all() method with arguments.
-        test_new(self): Test the new() method of FileStorage class.
-        test_new_with_args(self): Test the new() method with arguments.
-        test_new_with_None(self): Test the new() method with None argument.
-        test_save(self): Test the save() method of FileStorage class.
-        test_save_with_arg(self): Test the save() method with arguments.
-        test_reload(self): Test the reload() method of FileStorage class.
-        test_reload_no_file(self): Test reload() method when the file does not exist.
-        test_reload_with_arg(self): Test reload() method with arguments.
+        setUp(self):
+            Set up the test environment.
+        tearDown(self):
+        Tear down the test environment.
+        test_all(self):
+            Test the all() method of FileStorage class.
+        test_all_with_arg(self):
+            Test the all() method with arguments.
+        test_new(self):
+            Test the new() method of FileStorage class.
+        test_new_with_args(self):
+            Test the new() method with arguments.
+        test_new_with_None(self):
+            Test the new() method with None argument.
+        test_save(self):
+            Test the save() method of FileStorage class.
+        test_save_with_arg(self):
+            Test the save() method with arguments.
+        test_reload(self):
+            Test the reload() method of FileStorage class.
+        test_reload_no_file(self):
+            Test reload() method when the file does not exist.
+        test_reload_with_arg(self):
+            Test reload() method with arguments.
     """
 
     @classmethod
