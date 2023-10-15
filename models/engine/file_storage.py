@@ -11,6 +11,7 @@ from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
 
+
 class FileStorage:
     """Represent an abstracted storage engine.
 
@@ -42,7 +43,8 @@ class FileStorage:
     def save(self):
         """Serialize __objects to the JSON file __file_path."""
         current_objects = FileStorage.__objects
-        serialized_objects = {obj: current_objects[obj].to_dict() for obj in current_objects.keys()}
+        serialized_objects = {obj: current_objects[obj].to_dict()
+                              for obj in current_objects.keys()}
         with open(FileStorage.__file_path, "w") as file:
             json.dump(serialized_objects, file)
 
