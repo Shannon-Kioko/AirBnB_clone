@@ -18,9 +18,9 @@ class TestBaseModel_instantiation(unittest.TestCase):
 
     def test_no_args_instantiates(self):
         """
-        Test that a new instance of an object from BaseModel can be instantiated
-        with no arguments provided, and all attributes are set to their default
-        values as expected
+        Test that a new instance of an object from BaseModel can be
+        instantiated with no arguments provided, and all attributes
+        are set to their default values as expected
         """
         self.assertEqual(BaseModel, type(BaseModel()))
 
@@ -48,27 +48,39 @@ class TestBaseModel_instantiation(unittest.TestCase):
         self.assertEqual(datetime, type(BaseModel().updated_at))
 
     def test_two_models_unique_ids(self):
-        """Tests two different instances have unique ids even when they're not saved yet."""
+        """
+        Tests two different instances have unique ids even
+        when they're not saved yet.
+        """
         bm1 = BaseModel()
         bm2 = BaseModel()
         self.assertNotEqual(bm1.id, bm2.id)
 
     def test_two_models_different_created_at(self):
-        """Test two models created_at attribute on base model instantiates properly"""
+        """
+        Test two models created_at attribute on base
+        model instantiates properly
+        """
         bm1 = BaseModel()
         sleep(0.05)
         bm2 = BaseModel()
         self.assertLess(bm1.created_at, bm2.created_at)
 
     def test_two_models_different_updated_at(self):
-        """Test two models updated_at attribute on base model instantiates properly"""
+        """
+        Test two models updated_at attribute on base model
+        instantiates properly
+        """
         bm1 = BaseModel()
         sleep(0.05)
         bm2 = BaseModel()
         self.assertLess(bm1.updated_at, bm2.updated_at)
 
     def test_str_representation(self):
-        """Test str representation of a model includes its class name and id."""
+        """
+        Test str representation of a model includes
+        its class name and id.
+        """
         dt = datetime.today()
         dt_repr = repr(dt)
         bm = BaseModel()
@@ -117,12 +129,18 @@ class TestBaseModel_save(unittest.TestCase):
         N/A
 
     Methods:
-        setUp(self): Set up the test environment.
-        tearDown(self): Tear down the test environment.
-        test_one_save(self): Test if save method updates the updated_at attribute.
-        test_two_saves(self): Test if multiple saves update the updated_at attribute.
-        test_save_with_arg(self): Test save method with arguments.
-        test_save_updates_file(self): Test if save method updates the file.
+        setUp(self):
+            Set up the test environment.
+        tearDown(self):
+            Tear down the test environment.
+        test_one_save(self):
+            Test if save method updates the updated_at attribute.
+        test_two_saves(self):
+            Test if multiple saves update the updated_at attribute.
+        test_save_with_arg(self):
+            Test save method with arguments.
+        test_save_updates_file(self):
+            Test if save method updates the file.
     """
 
     @classmethod
@@ -189,12 +207,18 @@ class TestBaseModel_to_dict(unittest.TestCase):
 
     Methods:
         test_to_dict_type(self): Test if to_dict method returns a dictionary.
-        test_to_dict_contains_correct_keys(self): Test if the returned dictionary contains correct keys.
-        test_to_dict_contains_added_attributes(self): Test if the returned dictionary contains added attributes.
-        test_to_dict_datetime_attributes_are_strs(self): Test if datetime attributes in the dictionary are strings.
-        test_to_dict_output(self): Test the output of to_dict method.
-        test_contrast_to_dict_dunder_dict(self): Test if to_dict method differs from the dunder dict.
-        test_to_dict_with_arg(self): Test to_dict method with arguments.
+        test_to_dict_contains_correct_keys(self):
+            Test if the returned dictionary contains correct keys.
+        test_to_dict_contains_added_attributes(self):
+            Test if the returned dictionary contains added attributes.
+        test_to_dict_datetime_attributes_are_strs(self):
+            Test if datetime attributes in the dictionary are strings.
+        test_to_dict_output(self):
+            Test the output of to_dict method.
+        test_contrast_to_dict_dunder_dict(self):
+            Test if to_dict method differs from the dunder dict.
+        test_to_dict_with_arg(self):
+            Test to_dict method with arguments.
     """
 
     def test_to_dict_type(self):
