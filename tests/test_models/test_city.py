@@ -16,7 +16,7 @@ from models.city import City
 class TestCity_instantiation(unittest.TestCase):
     """
     Unittests for testing instantiation of the City class.
-    
+
     Attributes:
         N/A
     """
@@ -38,11 +38,13 @@ class TestCity_instantiation(unittest.TestCase):
         self.assertEqual(str, type(City().id))
 
     def test_created_at_is_public_datetime(self):
-        """Test if the created_at attribute is a public datetime in City instances."""
+        """Test if the created_at attribute is a public datetime
+        in City instances."""
         self.assertEqual(datetime, type(City().created_at))
 
     def test_updated_at_is_public_datetime(self):
-        """Test if the updated_at attribute is a public datetime in City instances."""
+        """Test if the updated_at attribute is a public datetime
+        in City instances."""
         self.assertEqual(datetime, type(City().updated_at))
 
     def test_state_id_is_public_class_attribute(self):
@@ -88,7 +90,8 @@ class TestCity_instantiation(unittest.TestCase):
         self.assertLess(cy1.updated_at, cy2.updated_at)
 
     def test_str_representation(self):
-        """Test if the __str__ method produces the correct string representation."""
+        """Test if the __str__ method produces the correct
+        string representation."""
         dt = datetime.today()
         dt_repr = repr(dt)
         cy = City()
@@ -115,7 +118,8 @@ class TestCity_instantiation(unittest.TestCase):
         self.assertEqual(cy.updated_at, dt)
 
     def test_instantiation_with_None_kwargs(self):
-        """Test if City instantiation raises an error with None keyword arguments."""
+        """Test if City instantiation raises an error with None
+        keyword arguments."""
         with self.assertRaises(TypeError):
             City(id=None, created_at=None, updated_at=None)
 
