@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 
 class Review(BaseModel):
     """
-    This class defines the Review model. 
+    This class defines the Review model.
     Attributes:
         place_id (str): The Place id.
         user_id (str): The User id.
