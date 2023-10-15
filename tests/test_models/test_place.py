@@ -37,21 +37,24 @@ class TestPlace_instantiation(unittest.TestCase):
         self.assertEqual(datetime, type(Place().updated_at))
 
     def test_city_id_is_public_class_attribute(self):
-        """Test if the city_id attribute is a public class attribute in Place instances."""
+        """Test if the city_id attribute is a public class attribute
+        in Place instances."""
         pl = Place()
         self.assertEqual(str, type(Place.city_id))
         self.assertIn("city_id", dir(pl))
         self.assertNotIn("city_id", pl.__dict__)
 
     def test_user_id_is_public_class_attribute(self):
-        """Test if the user_id attribute is a public class attribute in Place instances."""
+        """Test if the user_id attribute is a public class attribute
+        in Place instances."""
         pl = Place()
         self.assertEqual(str, type(Place.user_id))
         self.assertIn("user_id", dir(pl))
         self.assertNotIn("user_id", pl.__dict__)
 
     def test_name_is_public_class_attribute(self):
-        """Test if the name attribute is a public class attribute in Place instances."""
+        """Test if the name attribute is a public class attribute
+        in Place instances."""
         pl = Place()
         self.assertEqual(str, type(Place.name))
         self.assertIn("name", dir(pl))
@@ -59,7 +62,8 @@ class TestPlace_instantiation(unittest.TestCase):
 
     def test_description_is_public_class_attribute(self):
         """
-        Test if the description attribute is a public class attribute in Place instances.
+        Test if the description attribute is a public class attribute
+        in Place instances.
         """
         pl = Place()
         self.assertEqual(str, type(Place.description))
@@ -78,7 +82,8 @@ class TestPlace_instantiation(unittest.TestCase):
 
     def test_number_bathrooms_is_public_class_attribute(self):
         """
-        Test if the number_bathrooms attribute is a public class attribute in Place instances.
+        Test if the number_bathrooms attribute is a public class
+        attribute in Place instances.
         """
         pl = Place()
         self.assertEqual(int, type(Place.number_bathrooms))
@@ -117,7 +122,8 @@ class TestPlace_instantiation(unittest.TestCase):
 
     def test_longitude_is_public_class_attribute(self):
         """
-        Test if the longitude attribute is a public class attribute in Place instances.
+        Test if the longitude attribute is a public class attribute
+        in Place instances.
         """
         pl = Place()
         self.assertEqual(float, type(Place.longitude))
@@ -126,7 +132,8 @@ class TestPlace_instantiation(unittest.TestCase):
 
     def test_amenity_ids_is_public_class_attribute(self):
         """
-        Test if the amenity_ids attribute is a public class attribute in Place instances.
+        Test if the amenity_ids attribute is a public class attribute
+        in Place instances.
         """
         pl = Place()
         self.assertEqual(list, type(Place.amenity_ids))
@@ -140,21 +147,24 @@ class TestPlace_instantiation(unittest.TestCase):
         self.assertNotEqual(pl1.id, pl2.id)
 
     def test_two_places_different_created_at(self):
-        """Test if the created_at attribute is different for two Place instances."""
+        """Test if the created_at attribute is different for
+        two Place instances."""
         pl1 = Place()
         sleep(0.05)
         pl2 = Place()
         self.assertLess(pl1.created_at, pl2.created_at)
 
     def test_two_places_different_updated_at(self):
-        """Test if the updated_at attribute is different for two Place instances."""
+        """Test if the updated_at attribute is different for two
+        Place instances."""
         pl1 = Place()
         sleep(0.05)
         pl2 = Place()
         self.assertLess(pl1.updated_at, pl2.updated_at)
 
     def test_str_representation(self):
-        """Test if the __str__ method produces the correct string representation."""
+        """Test if the __str__ method produces the correct
+        string representation."""
         dt = datetime.today()
         dt_repr = repr(dt)
         pl = Place()
