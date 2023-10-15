@@ -1,5 +1,5 @@
 # AirBnB_clone - HBnB
-ALX AirBnB Clone Project with @Shannon Kioko that simulates the core functionalities of Airbnb. It allows users to create and manage data about users, places, reviews, amenities, and more.
+ALX AirBnB Clone Project with @Shannon-Kioko that simulates the core functionalities of Airbnb. It allows users to create and manage data about users, places, reviews, amenities, and more.
 
 ## Table of Contents
 
