@@ -22,7 +22,7 @@ class TestReview_instantiation(unittest.TestCase):
 
     def test_new_instance_stored_in_objects(self):
         """
-        Test if the new Review instance is stored in the 
+        Test if the new Review instance is stored in the
         objects dictionary.
         """
         self.assertIn(Review(), models.storage.all().values())
@@ -32,11 +32,13 @@ class TestReview_instantiation(unittest.TestCase):
         self.assertEqual(str, type(Review().id))
 
     def test_created_at_is_public_datetime(self):
-        """Test if the created_at attribute is a public datetime in Review instances."""
+        """Test if the created_at attribute is a public datetime
+        in Review instances."""
         self.assertEqual(datetime, type(Review().created_at))
 
     def test_updated_at_is_public_datetime(self):
-        """ Test if the updated_at attribute is a public datetime in Review instances.
+        """ Test if the updated_at attribute is a public
+        datetime in Review instances.
         """
         self.assertEqual(datetime, type(Review().updated_at))
 
@@ -68,21 +70,24 @@ class TestReview_instantiation(unittest.TestCase):
         self.assertNotEqual(rv1.id, rv2.id)
 
     def test_two_reviews_different_created_at(self):
-        """Test if the created_at attribute is different for two Review instances."""
+        """Test if the created_at attribute is different for
+        two Review instances."""
         rv1 = Review()
         sleep(0.05)
         rv2 = Review()
         self.assertLess(rv1.created_at, rv2.created_at)
 
     def test_two_reviews_different_updated_at(self):
-        """Test if the updated_at attribute is different for two Review instances."""
+        """Test if the updated_at attribute is different
+        for two Review instances."""
         rv1 = Review()
         sleep(0.05)
         rv2 = Review()
         self.assertLess(rv1.updated_at, rv2.updated_at)
 
     def test_str_representation(self):
-        """Test if the __str__ method produces the correct string representation."""
+        """Test if the __str__ method produces the correct
+        string representation."""
         dt = datetime.today()
         dt_repr = repr(dt)
         rv = Review()
@@ -109,7 +114,8 @@ class TestReview_instantiation(unittest.TestCase):
         self.assertEqual(rv.updated_at, dt)
 
     def test_instantiation_with_None_kwargs(self):
-        """Test if Review instantiation raises an error with None keyword arguments."""
+        """Test if Review instantiation raises an error with
+        None keyword arguments."""
         with self.assertRaises(TypeError):
             Review(id=None, created_at=None, updated_at=None)
 
@@ -149,7 +155,7 @@ class TestReview_save(unittest.TestCase):
         rv = Review()
         with self.assertRaises(TypeError):
             rv.save(None)
-        
+
     def test_save_updates_file(self):
         """Test if save method updates the file."""
         rv = Review()
@@ -168,8 +174,7 @@ class TestReview_save(unittest.TestCase):
         self.assertLess(first_updated_at, second_updated_at)
         sleep(0.05)
         rv.save()
-        self.assertLess(second_updated_at, rv.updated_at)
-    
+        self.assertLess(second_updated_at, rv.updated_at)    
 
 class TestReview_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of the Review class."""
@@ -226,9 +231,6 @@ class TestReview_to_dict(unittest.TestCase):
         """Test if to_dict method differs from the dunder dict."""
         rv = Review()
         self.assertNotEqual(rv.to_dict(), rv.__dict__)
-
-    
-
 
 if __name__ == "__main__":
     unittest.main()
