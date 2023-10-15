@@ -23,7 +23,7 @@ ALX AirBnB Clone Project with @Shannon-Kioko that simulates the core functionali
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/HolbertonBnB.git
+   git clone https://github.com/yourusername/AirBnB_clone.git
 
 2. Change the repository:
    ```bash
