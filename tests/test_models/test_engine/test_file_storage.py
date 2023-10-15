@@ -26,11 +26,16 @@ class TestFileStorage_instantiation(unittest.TestCase):
         N/A
 
     Methods:
-        test_FileStorage_instantiation_no_args(self): Test instantiation of FileStorage class without arguments.
-        test_FileStorage_instantiation_with_arg(self): Test instantiation of FileStorage class with arguments.
-        test_FileStorage_file_path_is_private_str(self): Test if file_path attribute is a private string.
-        testFileStorage_objects_is_private_dict(self): Test if __objects attribute is a private dictionary.
-        test_storage_initializes(self): Test if storage initializes correctly.
+        test_FileStorage_instantiation_no_args(self):
+            Test instantiation of FileStorage class without arguments.
+        test_FileStorage_instantiation_with_arg(self):
+            Test instantiation of FileStorage class with arguments.
+        test_FileStorage_file_path_is_private_str(self):
+            Test if file_path attribute is a private string.
+        testFileStorage_objects_is_private_dict(self):
+            Test if __objects attribute is a private dictionary.
+        test_storage_initializes(self):
+            Test if storage initializes correctly.
     """
 
     def test_FileStorage_instantiation_no_args(self):
