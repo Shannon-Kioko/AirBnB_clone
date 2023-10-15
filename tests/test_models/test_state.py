@@ -21,7 +21,8 @@ class TestState_instantiation(unittest.TestCase):
         self.assertEqual(State, type(State()))
 
     def test_new_instance_stored_in_objects(self):
-        """Test if the new State instance is stored in the objects dictionary."""
+        """Test if the new State instance is stored in the
+        objects dictionary."""
         self.assertIn(State(), models.storage.all().values())
 
     def test_id_is_public_str(self):
@@ -29,11 +30,13 @@ class TestState_instantiation(unittest.TestCase):
         self.assertEqual(str, type(State().id))
 
     def test_created_at_is_public_datetime(self):
-        """Test if the created_at attribute is a public datetime in State instances."""
+        """Test if the created_at attribute is a public datetime
+        in State instances."""
         self.assertEqual(datetime, type(State().created_at))
 
     def test_updated_at_is_public_datetime(self):
-        """Test if the updated_at attribute is a public datetime in State instances."""
+        """Test if the updated_at attribute is a public datetime
+        in State instances."""
         self.assertEqual(datetime, type(State().updated_at))
 
     def test_name_is_public_class_attribute(self):
@@ -50,21 +53,24 @@ class TestState_instantiation(unittest.TestCase):
         self.assertNotEqual(st1.id, st2.id)
 
     def test_two_states_different_created_at(self):
-        """Test if the created_at attribute is different for two State instances."""
+        """Test if the created_at attribute is different
+        for two State instances."""
         st1 = State()
         sleep(0.05)
         st2 = State()
         self.assertLess(st1.created_at, st2.created_at)
 
     def test_two_states_different_updated_at(self):
-        """Test if the updated_at attribute is different for two State instances."""
+        """Test if the updated_at attribute is different for
+        two State instances."""
         st1 = State()
         sleep(0.05)
         st2 = State()
         self.assertLess(st1.updated_at, st2.updated_at)
 
     def test_str_representation(self):
-        """Test if the __str__ method produces the correct string representation."""
+        """Test if the __str__ method produces the correct string
+        representation."""
         dt = datetime.today()
         dt_repr = repr(dt)
         st = State()
@@ -91,7 +97,8 @@ class TestState_instantiation(unittest.TestCase):
         self.assertEqual(st.updated_at, dt)
 
     def test_instantiation_with_None_kwargs(self):
-        """ Test if State instantiation raises an error with None keyword arguments."""
+        """ Test if State instantiation raises an error with
+        None keyword arguments."""
         with self.assertRaises(TypeError):
             State(id=None, created_at=None, updated_at=None)
 
