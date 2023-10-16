@@ -9,6 +9,7 @@ ALX AirBnB Clone Project with @Shannon-Kioko that simulates the core functionali
 - [Usage](#usage)
   - [Command-Line Interface](#command-line-interface)
 - [Features](#features)
+- [Authors](#authors)
 
 ## Getting Started
 
@@ -62,5 +63,6 @@ The command-line interface provides various commands to interact with the applic
 * Data retrieval from the JSON file on startup for continued work.
 * Extensible with additional classes and features for future expansion.
 
-
-   
+### Authors
+* Shannon Kioko
+* John Ombuya
