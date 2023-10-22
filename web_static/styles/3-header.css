@@ -1,0 +1,21 @@
+header {
+    color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    padding-left: 20px; /* Added padding for space at the left */
+}
+
+.h-logo {
+    width: 30px; /* Adjust the width as needed for your logo */
+    height: 30px; /* Adjust the height as needed for your logo */
+    margin-right: 10px;
+    margin-left: 0; /* Remove margin-left to align the logo on the left */
+}
+
+.h-icon {
+    color: white;
+    font-size: 20px; /* You can adjust the size as needed */
+}
