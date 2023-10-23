@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #484848;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.logo {
+    content: url('../images/logo.png');
+    width: 9rem; /* Adjust the width as needed for the logo */
+    height: 4rem; /* Adjust the height as needed for thre logo */
+    margin-right: 10px;
+    margin-left: 0; /* Remove margin-left to align the logo on the left */
+}
