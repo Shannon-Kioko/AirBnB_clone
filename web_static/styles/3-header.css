@@ -1,7 +1,7 @@
 header {
     color: white;
     height: 70px;
-    width: 100%;
+    /* width: 100%; - Commented so there is no horizontal scroll*/
     border-bottom: 1px solid #cccccc;
     display: flex;
     align-items: center;
